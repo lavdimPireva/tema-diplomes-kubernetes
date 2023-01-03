@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: {{ .Values.app.name }}
+  name: {{ .Values.app.name }}
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: {{ .Values.app.name }}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: {{ .Values.app.name }}
+    spec:
+      containers:
+        - image: nginx:stable
+          imagePullPolicy: IfNotPresent
+          resources:
+            requests:
+              cpu: {{ .Values.resources.requestCpu }}
+              memory: {{ .Values.resources.requestMemory }} 
+            limits:
+              cpu: {{ .Values.resources.limitCpu }}
+              memory: {{ .Values.resources.limitMemory }}
+          ports:
+          - containerPort: {{ .Values.port.containerPort }}
+          name: {{ .Values.app.name }}

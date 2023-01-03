@@ -1,0 +1,29 @@
+{
+  "folders": [
+	{
+		"path": "../.."
+	},
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../next.js - Dockerfile"
+	},
+	{
+		"path": "../../service"
+	},
+	{
+		"path": "../../storage class"
+	},
+	{
+		"path": "../../persistent volumes"
+	},
+	{
+		"path": "../../ingress"
+	},
+	{
+		"path": "../../persistent volume claims"
+	}
+],
+  "settings": {}
+}

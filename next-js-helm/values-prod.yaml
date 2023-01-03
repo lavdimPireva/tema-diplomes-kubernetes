@@ -1,0 +1,16 @@
+app:
+  name: my-app-nextjs
+
+port:
+  servicePort: 80
+  containerPort: 3000
+
+hostname: my-frontend-web.com
+
+#ne prod po dojm me i ndrru qito vlera mos me qene te njejta
+#me dev
+resources:
+  requestCpu: 85m
+  requestMemory: 484Mi
+  limitCpu: 100m
+  limitMemory: 700Mi
