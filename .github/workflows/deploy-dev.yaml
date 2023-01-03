@@ -50,7 +50,7 @@ jobs:
           aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name kubernetes-cluster
           kubectl config current-context
 
-      # - name: Helm install/upgrade chart
-      #   env:
-      #     IMAGE_TAG: ${{ github.sha }}
-      #   run: helm upgrade ellavdim-web ./helm/frontend-web/ -f ./helm/frontend-web/values-dev.yaml --install --namespace lavdim-fiek --create-namespace --set app.image_tag=${{ env.IMAGE_TAG }}
+      - name: Helm install/upgrade chart
+        env:
+          IMAGE_TAG: ${{ github.sha }}
+        run: helm upgrade ellavdim-web-release ./helm/ -f ./helm/values-dev --install --namespace lavdim-fiek --create-namespace --set app.image_tag=${{ env.IMAGE_TAG }}

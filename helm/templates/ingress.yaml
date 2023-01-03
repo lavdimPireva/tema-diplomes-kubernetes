@@ -7,12 +7,12 @@ metadata:
       alb.ingress.kubernetes.io/group.name: default
       alb.ingress.kubernetes.io/scheme: internet-facing
       alb.ingress.kubernetes.io/target-type: ip
-      alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:eu-central-1:371068675683:certificate/f0e6a046-50f5-4ee5-b0ce-5a82949a869f
+      alb.ingress.kubernetes.io/certificate-arn: {{ .Values.app.certificate_arn }}
       alb.ingress.kubernetes.io/ssl-redirect: "443"
       alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
 spec:
   rules:
-    - host: ellavda.com
+    - host: {{ .Values.hostname }}
       http:
         paths:
           - path: /

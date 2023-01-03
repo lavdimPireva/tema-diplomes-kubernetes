@@ -1,13 +1,14 @@
 app:
-  name: react-docker
-  # ecr_uri: 371068675683.dkr.ecr.eu-central-1.amazonaws.com/ellavda
+  name: my-app-nextjs
+  ecr_uri: 371068675683.dkr.ecr.eu-central-1.amazonaws.com/ecr-repo
+  certificate_arn: arn:aws:acm:eu-central-1:371068675683:certificate/f0e6a046-50f5-4ee5-b0ce-5a82949a869f
   image_tag: latest
 
 port:
   servicePort: 80
-  containerPort: 80
+  containerPort: 3000
 
-# hostname: my-frontend-web.com
+hostname: ellavda.com
 
 resources:
   requestCpu: 75m
