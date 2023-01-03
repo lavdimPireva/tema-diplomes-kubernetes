@@ -53,4 +53,4 @@ jobs:
       - name: Helm install/upgrade chart
         env:
           IMAGE_TAG: ${{ github.sha }}
-        run: helm upgrade ellavdim-web-release ./helm/ -f ./helm/values-dev --install --namespace lavdim-fiek --create-namespace --set app.image_tag=${{ env.IMAGE_TAG }}
+        run: helm upgrade ellavdim-web-release ./helm/ -f ./helm/values-dev.yaml --install --namespace lavdim-fiek --create-namespace --set app.image_tag=${{ env.IMAGE_TAG }}
