@@ -47,7 +47,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install helm
 
-          aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name kubernetes-cluster-v2
+          aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name kubernetes-cluster
           kubectl config current-context
 
       - name: Helm install/upgrade chart
