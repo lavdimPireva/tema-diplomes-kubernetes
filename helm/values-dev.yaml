@@ -1,5 +1,5 @@
 app:
-  name: my-app-nextj
+  name: my-app-nextjs
   ecr_uri: 371068675683.dkr.ecr.eu-central-1.amazonaws.com/ecr-repo
   certificate_arn: arn:aws:acm:eu-central-1:371068675683:certificate/2e2139e3-bf63-4db8-9e3f-bc50175f734a
   image_tag: latest

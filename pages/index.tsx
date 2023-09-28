@@ -17,7 +17,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
-            Fiek Fieks
+            Fakulteti i inxhinierise elektrike dhe kompjuterike!
             <code className={styles.code}> pages/index.tsx</code>
           </p>
           <div>
